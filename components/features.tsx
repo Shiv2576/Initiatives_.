@@ -53,14 +53,14 @@ const Features: React.FC = () => {
       <div className="w-full mb-12 sm:mb-16 md:mb-20 lg:mb-24 px-2">
         <h1
           className="
-          text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem]
-          font-thin text-center
-          bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-600
-          bg-clip-text text-transparent
-          whitespace-nowrap overflow-x-auto
-          tracking-tight sm:tracking-normal
-          pb-2
-        "
+            text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl
+            font-thin text-center
+            bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-600
+            bg-clip-text text-transparent
+            whitespace-nowrap overflow-x-auto
+            tracking-tight
+            pb-1
+          "
         >
           Currently Learning
         </h1>
