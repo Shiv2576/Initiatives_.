@@ -15,6 +15,7 @@ export default function Home() {
     <>
       {/* 1. Far background (e.g., gradient, particles, etc.) */}
       <Background />
+      <Navbar />
 
       {/* 2. Navbar — must be above background, below ghost */}
 
@@ -22,8 +23,6 @@ export default function Home() {
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <Hero />
         <Features />
-        <Pricing />
-        <FAQ />
         <Testimonials />
         <CTABanner />
         <Footer />

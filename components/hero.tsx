@@ -38,9 +38,23 @@ const Hero = () => {
         </h2>
 
         {/* Tertiary line (Very light descriptor) */}
-        <p className="text-xl font-light text-neutral-300 mt-8">
-          A visual language exploration
-        </p>
+        <div className="mt-8 flex items-center justify-center">
+          <span className="text-2xl font-light bg-gradient-to-r from-neutral-200 via-neutral-300 to-neutral-400 bg-clip-text text-transparent">
+            Designing
+          </span>
+          <span className="mx-6 text-2xl font-light text-neutral-500/40 rotate-12">
+            /
+          </span>
+          <span className="text-2xl font-light bg-gradient-to-r from-neutral-300 via-neutral-400 to-neutral-500 bg-clip-text text-transparent">
+            Learning
+          </span>
+          <span className="mx-6 text-2xl font-light text-neutral-500/40 rotate-12">
+            /
+          </span>
+          <span className="text-2xl font-light bg-gradient-to-r from-neutral-400 via-neutral-500 to-neutral-600 bg-clip-text text-transparent">
+            Exploring
+          </span>
+        </div>
       </div>
     </div>
   );

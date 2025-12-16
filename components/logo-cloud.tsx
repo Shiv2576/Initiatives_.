@@ -1,12 +1,10 @@
 import { HTMLAttributes } from "react";
-import { Logo } from "./navbar/logo";
 
 function LogoCloud(props: HTMLAttributes<HTMLDivElement>) {
   return (
     <div {...props}>
       <p className="text-center">Trusted by engineers at</p>
       <div className="mt-6 flex items-center justify-center flex-wrap gap-4 [&_svg]:h-auto [&_svg]:w-24 xs:[&_svg]:w-auto xs:[&_svg]:h-8 text-muted-foreground">
-        <Logo />
         <svg
           id="logo-78"
           width="175"

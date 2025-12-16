@@ -49,33 +49,38 @@ const features = [
 
 const Features: React.FC = () => {
   return (
-    <section className="py-24 w-full max-w-4xl mx-auto px-6">
+    <section className="py-32 w-full max-w-5xl mx-auto px-8">
       {/* Large h1 with gradient */}
-      <div className="mb-20">
-        <h1 className="text-7xl md:text-8xl font-thin text-center bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-600 bg-clip-text text-transparent">
+      <div className="mb-24">
+        <h1 className="text-8xl md:text-9xl font-thin text-center bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-600 bg-clip-text text-transparent">
           Currently Learning
         </h1>
       </div>
 
       {/* Clean stack with visible icons */}
-      <div className="space-y-2">
+      <div className="space-y-4">
         {features.map((feature, index) => (
           <div key={feature.title} className="w-full">
-            <div className="flex justify-between items-start py-8">
-              <div className="pr-8">
-                <h3 className="text-xl font-semibold bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-600 bg-clip-text text-transparent">
+            <div className="flex justify-between items-center py-14 px-10  rounded-2xl">
+              <div className="pr-12">
+                <h3 className="text-3xl font-semibold bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-600 bg-clip-text text-transparent mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-neutral-400 mt-2">{feature.description}</p>
+                <p className="text-neutral-400 text-xl leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
               {/* Visible icon with gradient using SVG props */}
-              <feature.icon
-                className="w-10 h-10 flex-shrink-0"
-                style={{
-                  stroke: "url(#gradient)",
-                  strokeWidth: 1.5,
-                }}
-              />
+              <div className="relative">
+                <feature.icon
+                  className="w-16 h-16 flex-shrink-0"
+                  style={{
+                    stroke: "url(#gradient)",
+                    strokeWidth: 1.8,
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-neutral-200/10 via-neutral-400/10 to-neutral-600/10 blur-xl rounded-full"></div>
+              </div>
             </div>
 
             {/* SVG gradient definition for icons */}
@@ -90,7 +95,7 @@ const Features: React.FC = () => {
             </svg>
 
             {index < features.length - 1 && (
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-neutral-700/50 to-transparent"></div>
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-neutral-700/30 to-transparent my-6"></div>
             )}
           </div>
         ))}
