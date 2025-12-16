@@ -47,29 +47,55 @@ const features = [
   },
 ];
 
-const Features = () => {
+const Features: React.FC = () => {
   return (
-    <div id="features" className="w-full py-12 xs:py-20 px-6">
-      <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
-        Unleash Your Creativity
-      </h2>
-      <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {features.map((feature) => (
-          <div
-            key={feature.title}
-            className="flex flex-col bg-background border rounded-xl py-6 px-5"
-          >
-            <div className="mb-3 h-10 w-10 flex items-center justify-center bg-muted rounded-full">
-              <feature.icon className="h-6 w-6" />
+    <section className="py-24 w-full max-w-4xl mx-auto px-6">
+      {/* Large h1 with gradient */}
+      <div className="mb-20">
+        <h1 className="text-7xl md:text-8xl font-thin text-center bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-600 bg-clip-text text-transparent">
+          Currently Learning
+        </h1>
+      </div>
+
+      {/* Clean stack with visible icons */}
+      <div className="space-y-2">
+        {features.map((feature, index) => (
+          <div key={feature.title} className="w-full">
+            <div className="flex justify-between items-start py-8">
+              <div className="pr-8">
+                <h3 className="text-xl font-semibold bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-600 bg-clip-text text-transparent">
+                  {feature.title}
+                </h3>
+                <p className="text-neutral-400 mt-2">{feature.description}</p>
+              </div>
+              {/* Visible icon with gradient using SVG props */}
+              <feature.icon
+                className="w-10 h-10 flex-shrink-0"
+                style={{
+                  stroke: "url(#gradient)",
+                  strokeWidth: 1.5,
+                }}
+              />
             </div>
-            <span className="text-lg font-semibold">{feature.title}</span>
-            <p className="mt-1 text-foreground/80 text-[15px]">
-              {feature.description}
-            </p>
+
+            {/* SVG gradient definition for icons */}
+            <svg className="hidden" aria-hidden="true">
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#e5e5e5" /> {/* neutral-200 */}
+                  <stop offset="50%" stopColor="#a3a3a3" /> {/* neutral-400 */}
+                  <stop offset="100%" stopColor="#525252" /> {/* neutral-600 */}
+                </linearGradient>
+              </defs>
+            </svg>
+
+            {index < features.length - 1 && (
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-neutral-700/50 to-transparent"></div>
+            )}
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

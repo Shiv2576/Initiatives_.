@@ -17,7 +17,6 @@ export default function Home() {
       <Background />
 
       {/* 2. Navbar — must be above background, below ghost */}
-      <Navbar />
 
       {/* 3. Main scrollable content */}
       <main className="pt-16 xs:pt-20 sm:pt-24">
