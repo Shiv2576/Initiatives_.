@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Logo } from "./logo";
+import Link from "next/link";
 
 export const NavigationSheet = () => {
   return (
@@ -15,10 +16,13 @@ export const NavigationSheet = () => {
         <Logo src="/try.jpg" alt="Your Logo" size={50} />
 
         <div className="mt-8 space-y-4">
-          <Button variant="outline" className="w-full sm:hidden">
-            Sign In
-          </Button>
-          <Button className="w-full xs:hidden">Get Started</Button>
+          <Link
+            href="https://github.com/Shiv2576/Initiatives_..git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="hidden xs:inline-flex ">Github</Button>
+          </Link>
         </div>
       </SheetContent>
     </Sheet>
